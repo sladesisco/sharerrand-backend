@@ -49,7 +49,7 @@ public class TestControllerTest {
 
         doReturn(test).when(testDAO).save(any(sharerrand.api.models.Test.class));
         MvcResult mvcResult = mockMvc.perform(post("/test")
-                .param("body",body)
+                .content(body)
                 .contentType(MediaType.APPLICATION_JSON_VALUE))
                 .andExpect(status().isOk())
                 .andReturn();
