@@ -8,11 +8,7 @@ public class Address {
         return address;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public boolean setNumber(String number) {
+    public boolean setAddress(String number) {
         boolean valid = isValid(number);
         if (valid)
             this.address = number;
@@ -22,5 +18,9 @@ public class Address {
     public boolean isValid(String number) {
         //TODO: CALL EXTERNAL WEB SERVICE TO VALIDATE https://streetlayer.com/
         return true;
+    }
+
+    public Address(String address) {
+        setAddress(address);
     }
 }
